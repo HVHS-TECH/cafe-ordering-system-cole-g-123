@@ -22,7 +22,7 @@
   </ol>
 </div>
 
-<form onsubmit="return false;">
+<form id="orderForm">
   <label for="nameField">Name:</label>
   <input type="text" id="nameField" placeholder="Enter your name">
   <label for="coffeeType">Coffee Type:</label>
@@ -31,7 +31,11 @@
   <input type="text" id="quantity" placeholder="Enter quantity">
   <label for="money">Money:</label>
   <input type="text" id="money" placeholder="Enter amount of money">
-  <input type="submit" onClick="getFormInput()">
+  <input type="submit" value="Submit Order">
+</form>
+
+<div id="output" style="display:none;"></div>
+
 <script src="script.js"></script>
 </body>
 </html>

@@ -1,14 +1,14 @@
 console.log("Cafe Ordering System");
 
-function submitOrder() {
-    const name = document.getElementById("name").value;
-    const order = document.getElementById("order").value;
-    const quantity = document.getElementById("quantity").value;
+function getFormInput(event) {
+    event.preventDefault();
+
+    const nameField = document.getElementById("nameField");
+    const output = document.getElementById("output");
+    const userName = nameField.value.trim();
+
+    output.style.display = "block";
+    output.innerHTML = "<p>Hello " + userName + "! Welcome to our cafe.</p>";
 }
 
-function getFormInput() {
-    const NAME_FIELD = document.getElementById("nameField");
-    let userName = NAME_FIELD.value;
-    const OUTPUT = document.getElementById;
-    OUTPUT.innerHTML = "<p>Hello "+userName+"! Welcome to our cafe.</p>";
-}
+document.getElementById("orderForm").addEventListener("submit", getFormInput);
