@@ -9,6 +9,6 @@ function submitOrder() {
 function getFormInput() {
     const NAME_FIELD = document.getElementById("nameField");
     let userName = NAME_FIELD.value;
-    const OUTPUT = document.getElementById("output");
+    const OUTPUT = document.getElementById;
     OUTPUT.innerHTML = "<p>Hello "+userName+"! Welcome to our cafe.</p>";
 }
