@@ -11,3 +11,4 @@ function getFormInput() {
     let userName = NAME_FIELD.value;
     const OUTPUT = document.getElementById("output");
     OUTPUT.innerHTML = "<p>Hello "+userName+"! Welcome to our cafe.</p>";
+}
