@@ -23,7 +23,14 @@
 </div>
 
 <form onsubmit="return false;">
-  <input type="text" Id="nameField" name="nameField" required>
+  <label for="nameField">Name:</label>
+  <input type="text" id="nameField" placeholder="Enter your name">
+  <label for="coffeeType">Coffee Type:</label>
+  <input type="text" id="coffeeType" placeholder="Enter coffee type">
+  <label for="quantity">Quantity:</label>
+  <input type="text" id="quantity" placeholder="Enter quantity">
+  <label for="money">Money:</label>
+  <input type="text" id="money" placeholder="Enter amount of money">
   <input type="submit" onClick="getFormInput()">
 <script src="script.js"></script>
 </body>
