@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Receipt</title>
+</head>
+<body>
+    <h1>Receipt</h1>
+    <div id="receiptContent"></div>
+    <p><a href="index.html">Back to Order Form</a></p>
+
+    <script>
+        const receiptContent = document.getElementById("receiptContent");
+        const receiptData = JSON.parse(sessionStorage.getItem("receiptData"));
+
+        if (receiptData) {
+            receiptContent.innerHTML = "<p>Name: " + receiptData.name + "</p>" +
+                "<p>Coffee: " + receiptData.coffee + "</p>" +
+                "<p>Quantity: " + receiptData.quantity + "</p>" +
+                "<p>Total Cost: $" + receiptData.totalCost.toFixed(2) + "</p>" +
+                "<p>Change: $" + receiptData.change.toFixed(2) + "</p>";
+        } else {
+            receiptContent.innerHTML = "<p>No receipt available.</p>";
+        }
+    </script>
+</body>
+</html>

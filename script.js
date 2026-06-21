@@ -46,13 +46,17 @@ function getFormInput(event) {
     output.innerHTML = "<p>You entered: Name - " + userName + ", Coffee - " + coffeeName + ", Quantity - " + quantityValue + ", Money - $" + moneyValue.toFixed(2) + ".</p>";
 
     if (isEnoughMoney) {
+        const receiptData = {
+            name: userName,
+            coffee: coffeeName,
+            quantity: quantityValue,
+            totalCost: totalCost,
+            change: moneyValue - totalCost
+        };
+
+        sessionStorage.setItem("receiptData", JSON.stringify(receiptData));
         output.innerHTML += "<p>You have enough money to buy the coffee(s).</p>";
-        output.innerHTML += "<h3>Receipt</h3>";
-        output.innerHTML += "<p>Name: " + userName + "</p>";
-        output.innerHTML += "<p>Coffee: " + coffeeName + "</p>";
-        output.innerHTML += "<p>Quantity: " + quantityValue + "</p>";
-        output.innerHTML += "<p>Total Cost: $" + totalCost.toFixed(2) + "</p>";
-        output.innerHTML += "<p>Change: $" + (moneyValue - totalCost).toFixed(2) + "</p>";
+        output.innerHTML += "<p><a href='receipt.html'>View Receipt</a></p>";
     } else {
         output.innerHTML += "<p>You do not have enough money to buy the coffee(s).</p>";
     }
