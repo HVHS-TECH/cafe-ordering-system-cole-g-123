@@ -6,3 +6,8 @@ function submitOrder() {
     const quantity = document.getElementById("quantity").value;
 }
 
+function getFormInput() {
+    const NAME_FIELD = document.getElementById("nameField");
+    let userName = NAME_FIELD.value;
+    const OUTPUT = document.getElementById("output");
+    OUTPUT.innerHTML = "<p>Hello "+userName+"! Welcome to our cafe.</p>";
