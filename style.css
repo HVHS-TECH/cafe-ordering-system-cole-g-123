@@ -5,6 +5,9 @@
     max-width: 1000px;
 }
 
-#types {
-    padding: 200px;
+.types {
+    padding: 20px;
 }
+head, body{
+    background-color: rgba(210, 180, 140, 0.493);
+ }
