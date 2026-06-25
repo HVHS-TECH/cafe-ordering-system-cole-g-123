@@ -38,6 +38,11 @@ function getFormInput(event) {
         return;
     }
 
+    if (!Object.prototype.hasOwnProperty.call(menuPrices, normalizedCoffee)) {
+        output.innerHTML = "<p>Please enter a valid menu item.</p>";
+        return;
+    }
+
     if (Number.isNaN(quantityValue) || Number.isNaN(moneyValue) || quantityValue <= 0) {
         output.innerHTML = "<p>Please enter valid quantity and money values.</p>";
         return;
