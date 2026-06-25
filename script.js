@@ -44,7 +44,7 @@ function getFormInput(event) {
     }
 
     if (Number.isNaN(quantityValue) || Number.isNaN(moneyValue) || quantityValue <= 0) {
-        output.innerHTML = "<p>Please enter valid quantity and money values.</p>";
+        output.innerHTML = "<p>Please enter a valid quantity value.</p>";
         return;
     }
 
